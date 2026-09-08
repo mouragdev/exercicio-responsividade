@@ -4,7 +4,8 @@
    
     /* Primary Colors (Backgrounds) */
 
-    --brand-green: #00856F;
+    --bg-header-mobile: #0a0a0a;
+    --light-blue: #656dfc;
     --white: #FFF;
 
     /* Secondary Colors (Titles and Paragraphs) */
@@ -16,8 +17,13 @@
     /* Tipografias */
 
     --font: 'DM Sans', sans-serif;
+    --manrope: "Manrope", sans-serif;
 
     /* Calc Variables */
 
-    --nav-height: 8rem;
+    --header-height: 8rem;
+}
+
+.container {
+    padding: 0 3rem;
 }
