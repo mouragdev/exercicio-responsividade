@@ -204,3 +204,70 @@ main button span {
 .topic-card img {
     width: 25%;
 }
+
+
+/* Reviews Section */
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-block: 4rem;
+
+}
+
+.reviews h3 {
+    color: var(--light-blue);
+    font-weight: 700;
+}
+
+.reviews h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.2rem;
+}
+
+.review-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.review-cards article {
+    width: 80%;
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.img-container {
+    width: 40%;
+    /* border: 1px solid red; */
+}
+
+.img-container img {
+    width: 100%;
+}
+
+.review-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.review-content h4 {
+    margin-top: 1rem;
+}
+
+.occupation {
+    color: var(--light-blue);
+    font-weight: 700;
+}
+
+.review-content img {
+    margin-top: 1rem;
+    width: 30%;
+}
