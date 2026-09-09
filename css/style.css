@@ -12,6 +12,7 @@
 body {
     width: 100%;
     overflow-x: hidden;
+    font-family: var(--manrope);
 }
 
 
@@ -71,7 +72,6 @@ header nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 2rem;
-    font-family: var(--manrope);
 }
 
 .contact {
@@ -101,11 +101,8 @@ header button .close-button {
 
 /* Main Section */
 
-main {
-    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.1) inset;
-}
 
-main div {
+main{
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -120,24 +117,22 @@ main div {
     /* border: 1px solid red; */
 }
 
-main div h3 {
+main h3 {
     color: var(--light-blue);
-    font-family: var(--manrope);
     font-weight: 700;
 
 }
 
-main div h1 {
-    font-family: var(--manrope);
+main h1 {
     color: white;
     font-size: 2.6rem;
     line-height: 3rem;
 }
 
 main p {
-    font-family: var(--manrope);
+    
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 main button {
@@ -148,10 +143,64 @@ main button {
     color: white;
     border: none;
     border-radius: 5rem;
-    font-family: var(--manrope);
     font-weight: 700;
 }
 
 main button span {
     margin-left: 1rem;
+}
+
+/* About Section */
+
+.about {
+    padding-block: 4rem;
+}
+
+.about-description {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.about-description h3 {
+    color: var(--light-blue);
+    font-weight: 700;
+}
+
+.about-description h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.2rem;
+}
+
+.about-description p {
+    font-size: 1.4rem;
+    font-size: 500;
+}
+
+.about-topics {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.topic-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    /* border: 1px solid red; */
+}
+
+.topic-card div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px solid red; */
+    text-align: center;
+}
+
+.topic-card img {
+    width: 25%;
 }
