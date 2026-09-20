@@ -5,6 +5,7 @@ openMenuButton.addEventListener("click", () => {
     const iconeBotao = openMenuButton.querySelector("img");
 
     nav.classList.toggle("mobile-aberto");
+    document.body.classList.toggle("menu-aberto");
 
     if(nav.classList.contains("mobile-aberto")) {
         iconeBotao.src = "./assets/close-menu.png"
