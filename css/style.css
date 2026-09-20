@@ -9,7 +9,7 @@
 
 /* Header */
 
-body {
+html, body {
     width: 100%;
     overflow-x: hidden;
     font-family: var(--manrope);
