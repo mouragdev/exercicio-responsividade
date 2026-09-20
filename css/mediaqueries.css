@@ -1,0 +1,54 @@
+/* Desktop - 1024px+ */
+
+@media (min-width: 1024px) {
+
+    /* Header */
+
+    header {
+        padding: 0 4rem;
+    }
+
+    header .home-logo {
+        max-width: 15%;
+    }
+
+    /* Nav - exibir como barra horizontal */
+
+    header nav {
+        position: static;
+        width: auto;
+        height: auto;
+        overflow: visible;
+
+        transform: none;
+        visibility: visible;
+        opacity: 1;
+
+        transition: none;
+    }
+
+    header nav ul {
+        flex-direction: row;
+        align-items: center;
+        background-color: transparent;
+        padding-top: 0;
+        height: auto;
+        width: auto;
+        gap: 3rem;
+    }
+
+    header nav ul li a {
+        font-size: 1.6rem;
+    }
+
+    .contact-button {
+        margin-top: 0;
+    }
+
+    /* Esconder botões mobile */
+
+    #open-menu-button,
+    #close-menu-button {
+        display: none !important;
+    }
+}
