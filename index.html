@@ -26,18 +26,18 @@
                 sizes="(max-width: 600px) 30vw, (max-width:1200px) 35vw, 33vw"> </a>
         <nav class="" id="header-nav">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Sobre</a></li>
-                <li><a href="">Serviços</a></li>
-                <li><a href="">Depoimentos</a></li>
-                <li><a href="" class="contact-button">Entre em Contato</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#reviews">Depoimentos</a></li>
+                <li><a href="#contact" class="contact-button">Entre em Contato</a></li>
             </ul>
         </nav>
         <button id="open-menu-button"><img src="./assets/mobile-menu.png" alt="Abrir menu"></button>
         <button id="close-menu-button"><img src="./assets/close-menu.png" alt="Fechar menu"></button>
     </header>
 
-    <main>
+    <main id="home">
         <div class="container main-content">
             <h3>AGÊNCIA CRIATIVA</h3>
             <h1>Transformamos ideias em experiências digitais.</h1>
@@ -46,7 +46,7 @@
         </div>
     </main>
 
-    <section class="about container">
+    <section class="about container" id="about">
         <div class="about-description">
             <h3>SOBRE NÓS</h3>
             <h2>Mais que uma agência, somos parceiros do seu crescimento.</h2>
@@ -85,7 +85,7 @@
         </div>
     </section>
 
-    <section class="services container" id="servicos">
+    <section class="services container" id="services">
         <div class="services-header">
             <h3>SERVIÇOS</h3>
             <h2>O que oferecemos</h2>
@@ -131,7 +131,7 @@
         </div>
     </section>
 
-    <section class="reviews container">
+    <section class="reviews container" id="reviews">
         <h3>DEPOIMENTOS</h3>
         <h2>O que nossos clientes dizem</h2>
         <div class="review-cards">
@@ -173,7 +173,7 @@
         </div>
     </section>
 
-    <section class="contact container">
+    <section class="contact container" id="contact">
         <div class="contact-content">
             <h3>CONTATO</h3>
             <h2>Vamos Conversar?</h2>
@@ -205,12 +205,11 @@
                 </li>
             </ul>
         </div>
-        <form action="">
-            <input type="text" placeholder="Nome" required>
-            <input type="email" placeholder="E-mail" required>
+        <form action="" id="contact-form">
+            <input type="text" placeholder="Nome" id="nome-informado" required>
+            <input type="email" placeholder="E-mail" id="email-informado" required>
             <textarea name="mesage" id="mesage" placeholder="Mensagem" rows="5" cols="40"></textarea>
-            <button>Enviar mensagem<span>→</span></button>
-
+            <button id="button-form">Enviar mensagem<span>→</span></button>
         </form>
     </section>
 

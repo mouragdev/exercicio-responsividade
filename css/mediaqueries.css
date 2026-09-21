@@ -53,6 +53,11 @@
    Desktop - 1024px+
    ========================================= */
 @media (min-width: 1024px) {
+    /* Ajusta a parada do scroll para a nova altura do header no desktop */
+    html {
+        scroll-padding-top: 10rem;
+    }
+
     /* 
       1. CONTAINER LIMITADO E CENTRALIZADO 
       Padrão de mercado para que o site não estique demais em monitores grandes.
