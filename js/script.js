@@ -1,15 +1,16 @@
-const openMenuButton = document.getElementById("open-menu-button");
-const closeMenuButton = document.getElementById("close-menu-button");
+const openMenuButton = document.querySelector(".js-open-menu");
+const closeMenuButton = document.querySelector(".js-close-menu");
 
-// 1. Selecionamos todos os links de navegação dentro do menu
-const navLinks = document.querySelectorAll("header nav ul li a");
+// 1. Selecionamos todos os links de navegação usando sua classe funcional JS
+const navLinks = document.querySelectorAll(".js-nav-link");
 
 function openMenu() {
-    document.body.classList.add("menu-aberto");
+    // Usamos o modificador de estado BEM --open na raiz ou onde for mais conveniente
+    document.body.classList.add("page--menu-open");
 }
 
 function closeMenu() {
-    document.body.classList.remove("menu-aberto");
+    document.body.classList.remove("page--menu-open");
 }
 
 openMenuButton.addEventListener("click", openMenu);
@@ -22,21 +23,20 @@ navLinks.forEach(link => {
 
 
 //  3. Salvamos os dados inseridos no formulario e previnimos o recarregamento da página
-document.getElementById("contact-form").addEventListener("submit", (event) => {
-    const nomeInformado = document.getElementById("nome-informado").value;
-    const emailInformado = document.getElementById("email-informado").value;
-    const mensagemFormulario = document.getElementById("mesage").value;
+document.querySelector(".js-contact-form").addEventListener("submit", (event) => {
+    const nomeInformado = document.querySelector(".js-form-name").value;
+    const emailInformado = document.querySelector(".js-form-email").value;
+    const mensagemFormulario = document.querySelector(".js-form-message").value;
     
-    event.preventDefault()
+    event.preventDefault();
     
-    console.log(`Nome: ${nomeInformado}`)
-    console.log(`Email: ${emailInformado}`)
-    console.log(`Mensagem: ${mensagemFormulario}`)
+    console.log(`Nome: ${nomeInformado}`);
+    console.log(`Email: ${emailInformado}`);
+    console.log(`Mensagem: ${mensagemFormulario}`);
 
-    alert(`Obrigado ${nomeInformado}, sua mensagem foi enviada com sucesso.`)
+    alert(`Obrigado ${nomeInformado}, sua mensagem foi enviada com sucesso.`);
 
-    document.getElementById("nome-informado").value = ""
-    document.getElementById("email-informado").value = ""
-    document.getElementById("mesage").value = ""
-    
-})
+    document.querySelector(".js-form-name").value = "";
+    document.querySelector(".js-form-email").value = "";
+    document.querySelector(".js-form-message").value = "";
+});

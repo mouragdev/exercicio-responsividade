@@ -21,63 +21,67 @@
 
 <body>
 
-    <header>
-        <a href="#home" class="home-logo"> <img src="./assets/nexora-logo-white.png" alt="" class="logo-header"
-                sizes="(max-width: 600px) 30vw, (max-width:1200px) 35vw, 33vw"> </a>
-        <nav class="" id="header-nav">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#services">Serviços</a></li>
-                <li><a href="#reviews">Depoimentos</a></li>
-                <li><a href="#contact" class="contact-button">Entre em Contato</a></li>
+    <header class="header">
+        <a href="#home" class="header__logo-link"> 
+            <img src="./assets/nexora-logo-white.png" alt="Logo Nexora" class="header__logo" sizes="(max-width: 600px) 30vw, (max-width:1200px) 35vw, 33vw"> 
+        </a>
+        <nav class="header__nav js-header-nav">
+            <ul class="header__menu">
+                <li class="header__menu-item"><a href="#home" class="header__menu-link js-nav-link">Home</a></li>
+                <li class="header__menu-item"><a href="#about" class="header__menu-link js-nav-link">Sobre</a></li>
+                <li class="header__menu-item"><a href="#services" class="header__menu-link js-nav-link">Serviços</a></li>
+                <li class="header__menu-item"><a href="#reviews" class="header__menu-link js-nav-link">Depoimentos</a></li>
+                <li class="header__menu-item"><a href="#contact" class="header__menu-link header__menu-link--button js-nav-link">Entre em Contato</a></li>
             </ul>
         </nav>
-        <button id="open-menu-button"><img src="./assets/mobile-menu.png" alt="Abrir menu"></button>
-        <button id="close-menu-button"><img src="./assets/close-menu.png" alt="Fechar menu"></button>
+        <button class="header__button header__button--open js-open-menu">
+            <img src="./assets/mobile-menu.png" alt="Abrir menu" class="header__button-icon">
+        </button>
+        <button class="header__button header__button--close js-close-menu">
+            <img src="./assets/close-menu.png" alt="Fechar menu" class="header__button-icon header__button-icon--close">
+        </button>
     </header>
 
-    <main id="home">
-        <div class="container main-content">
-            <h3>AGÊNCIA CRIATIVA</h3>
-            <h1>Transformamos ideias em experiências digitais.</h1>
-            <p>Somos a Nexora, uma agência que une design, tecnologia e estratégia para criar marcas fortes e presenciais no digital.</p>
-            <button>Vamos conversar <span>→</span></button>
+    <main class="hero" id="home">
+        <div class="container hero__content">
+            <h3 class="hero__subtitle">AGÊNCIA CRIATIVA</h3>
+            <h1 class="hero__title">Transformamos ideias em experiências digitais.</h1>
+            <p class="hero__text">Somos a Nexora, uma agência que une design, tecnologia e estratégia para criar marcas fortes e presenciais no digital.</p>
+            <button class="button hero__button">Vamos conversar <span class="button__icon">→</span></button>
         </div>
     </main>
 
     <section class="about container" id="about">
-        <div class="about-description">
-            <h3>SOBRE NÓS</h3>
-            <h2>Mais que uma agência, somos parceiros do seu crescimento.</h2>
-            <p>A Nexora nasceu com o propósito de ajudar marcas a se destacarem no mundo digital. Combinamos criatividade, tecnologia e estratégia para entregar soluções que geram resultados reais.</p>
+        <div class="about__description">
+            <h3 class="about__subtitle">SOBRE NÓS</h3>
+            <h2 class="about__title">Mais que uma agência, somos parceiros do seu crescimento.</h2>
+            <p class="about__text">A Nexora nasceu com o propósito de ajudar marcas a se destacarem no mundo digital. Combinamos criatividade, tecnologia e estratégia para entregar soluções que geram resultados reais.</p>
         </div>
 
-        <div>
-
-            <article class="about-topics">
+        <div class="about__topics-wrapper">
+            <article class="about__topics">
 
                 <div class="topic-card">
-                    <img src="./assets/icon-lamp.png" alt="">
-                    <div>
-                        <h4>Criatividade</h4>
-                        <p>sem limites</p>
+                    <img src="./assets/icon-lamp.png" alt="" class="topic-card__icon">
+                    <div class="topic-card__content">
+                        <h4 class="topic-card__title">Criatividade</h4>
+                        <p class="topic-card__subtitle">sem limites</p>
                     </div>
                 </div>
 
                 <div class="topic-card">
-                    <img src="./assets/icon-tech.png" alt="">
-                    <div>
-                        <h4>Tecnologia</h4>
-                        <p>com propósito</p>
+                    <img src="./assets/icon-tech.png" alt="" class="topic-card__icon">
+                    <div class="topic-card__content">
+                        <h4 class="topic-card__title">Tecnologia</h4>
+                        <p class="topic-card__subtitle">com propósito</p>
                     </div>
                 </div>
 
                 <div class="topic-card">
-                    <img src="./assets/icon-result.png" alt="">
-                    <div>
-                        <h4>Resultados</h4>
-                        <p>que importam</p>
+                    <img src="./assets/icon-result.png" alt="" class="topic-card__icon">
+                    <div class="topic-card__content">
+                        <h4 class="topic-card__title">Resultados</h4>
+                        <p class="topic-card__subtitle">que importam</p>
                     </div>
                 </div>
 
@@ -86,153 +90,147 @@
     </section>
 
     <section class="services container" id="services">
-        <div class="services-header">
-            <h3>SERVIÇOS</h3>
-            <h2>O que oferecemos</h2>
+        <div class="services__header">
+            <h3 class="services__subtitle">SERVIÇOS</h3>
+            <h2 class="services__title">O que oferecemos</h2>
         </div>
         
-        <div class="services-grid">
+        <div class="services__grid">
             <article class="service-card">
-                <!-- Usando icon-tech.png como placeholder genérico como solicitado -->
-                <img src="./assets/icon-design.png" alt="Ícone Design Gráfico">
-                <h4>Design Gráfico</h4>
-                <p>Identidade visual e materiais que comunicam.</p>
+                <img src="./assets/icon-design.png" alt="Ícone Design Gráfico" class="service-card__icon">
+                <h4 class="service-card__title">Design Gráfico</h4>
+                <p class="service-card__description">Identidade visual e materiais que comunicam.</p>
             </article>
             
             <article class="service-card">
-                <img src="./assets/icon-webdev.png" alt="Ícone Desenvolvimento Web">
-                <h4>Desenvolvimento Web</h4>
-                <p>Sites e sistemas sob medida.</p>
+                <img src="./assets/icon-webdev.png" alt="Ícone Desenvolvimento Web" class="service-card__icon">
+                <h4 class="service-card__title">Desenvolvimento Web</h4>
+                <p class="service-card__description">Sites e sistemas sob medida.</p>
             </article>
             
             <article class="service-card">
-                <img src="./assets/icon-branding.png" alt="Ícone Branding">
-                <h4>Branding</h4>
-                <p>Construção e fortalecimento de marcas.</p>
+                <img src="./assets/icon-branding.png" alt="Ícone Branding" class="service-card__icon">
+                <h4 class="service-card__title">Branding</h4>
+                <p class="service-card__description">Construção e fortalecimento de marcas.</p>
             </article>
             
             <article class="service-card">
-                <img src="./assets/icon-marketing.png" alt="Ícone Marketing Digital">
-                <h4>Marketing Digital</h4>
-                <p>Estratégias para aumentar sua presença online.</p>
+                <img src="./assets/icon-marketing.png" alt="Ícone Marketing Digital" class="service-card__icon">
+                <h4 class="service-card__title">Marketing Digital</h4>
+                <p class="service-card__description">Estratégias para aumentar sua presença online.</p>
             </article>
             
             <article class="service-card">
-                <img src="./assets/icon-social-media.png" alt="Ícone Social Media">
-                <h4>Social Media</h4>
-                <p>Conteúdo que engaja e conecta.</p>
+                <img src="./assets/icon-social-media.png" alt="Ícone Social Media" class="service-card__icon">
+                <h4 class="service-card__title">Social Media</h4>
+                <p class="service-card__description">Conteúdo que engaja e conecta.</p>
             </article>
             
             <article class="service-card">
-                <img src="./assets/icon-consult.png" alt="Ícone Consultoria Criativa">
-                <h4>Consultoria Criativa</h4>
-                <p>Direcionamento para o seu projeto crescer.</p>
+                <img src="./assets/icon-consult.png" alt="Ícone Consultoria Criativa" class="service-card__icon">
+                <h4 class="service-card__title">Consultoria Criativa</h4>
+                <p class="service-card__description">Direcionamento para o seu projeto crescer.</p>
             </article>
         </div>
     </section>
 
     <section class="reviews container" id="reviews">
-        <h3>DEPOIMENTOS</h3>
-        <h2>O que nossos clientes dizem</h2>
-        <div class="review-cards">
-            <article>
-                <div class="img-container">
-                    <img src="./assets/review-picture-1.png" alt="">
+        <h3 class="reviews__subtitle">DEPOIMENTOS</h3>
+        <h2 class="reviews__title">O que nossos clientes dizem</h2>
+        <div class="reviews__grid">
+            <article class="review-card">
+                <div class="review-card__image-wrapper">
+                    <img src="./assets/review-picture-1.png" alt="" class="review-card__image">
                 </div>
-                <div class="review-content">
-                    <p>"A Nexora superou todas as nossas expectativas. O site ficou ótimo e o atentimento foi impecável."</p>
-                    <h4>Pedro Alcantara</h4>
-                    <p class="occupation">Marketing, Auto Vivaz</p>
-                    <img src="./assets/stars-icon.png" alt="">
-                </div>
-            </article>
-
-            <article>
-                <div class="img-container">
-                    <img src="./assets/review-picture-2.png" alt="">
-                </div>
-                <div class="review-content">
-                    <p>"Profissionais incríveis! Conseguiram traduzir exatamente o que a nossa marca precisava."</p>
-                    <h4>Mariana Silva</h4>
-                    <p class="occupation">CEO, Estúdio Aurora</p>
-                    <img src="./assets/stars-icon.png" alt="">
+                <div class="review-card__content">
+                    <p class="review-card__quote">"A Nexora superou todas as nossas expectativas. O site ficou ótimo e o atentimento foi impecável."</p>
+                    <h4 class="review-card__author">Pedro Alcantara</h4>
+                    <p class="review-card__occupation">Marketing, Auto Vivaz</p>
+                    <img src="./assets/stars-icon.png" alt="" class="review-card__rating">
                 </div>
             </article>
 
-            <article>
-                <div class="img-container">
-                    <img src="./assets/review-picture-3.png" alt="">
+            <article class="review-card">
+                <div class="review-card__image-wrapper">
+                    <img src="./assets/review-picture-2.png" alt="" class="review-card__image">
                 </div>
-                <div class="review-content">
-                    <p>"Recomendo a Nexora de olhos fechados. Parceria de verdade com um time incrível!"</p>
-                    <h4>Rafael Costa</h4>
-                    <p class="occupation">Diretor, Tech Solutions</p>
-                    <img src="./assets/stars-icon.png" alt="">
+                <div class="review-card__content">
+                    <p class="review-card__quote">"Profissionais incríveis! Conseguiram traduzir exatamente o que a nossa marca precisava."</p>
+                    <h4 class="review-card__author">Mariana Silva</h4>
+                    <p class="review-card__occupation">CEO, Estúdio Aurora</p>
+                    <img src="./assets/stars-icon.png" alt="" class="review-card__rating">
+                </div>
+            </article>
+
+            <article class="review-card">
+                <div class="review-card__image-wrapper">
+                    <img src="./assets/review-picture-3.png" alt="" class="review-card__image">
+                </div>
+                <div class="review-card__content">
+                    <p class="review-card__quote">"Recomendo a Nexora de olhos fechados. Parceria de verdade com um time incrível!"</p>
+                    <h4 class="review-card__author">Rafael Costa</h4>
+                    <p class="review-card__occupation">Diretor, Tech Solutions</p>
+                    <img src="./assets/stars-icon.png" alt="" class="review-card__rating">
                 </div>
             </article>
         </div>
     </section>
 
     <section class="contact container" id="contact">
-        <div class="contact-content">
-            <h3>CONTATO</h3>
-            <h2>Vamos Conversar?</h2>
-            <p>Preencha o Fomulario e nos conte sobre o seu projeto. </br>
+        <div class="contact__content">
+            <h3 class="contact__subtitle">CONTATO</h3>
+            <h2 class="contact__title">Vamos Conversar?</h2>
+            <p class="contact__text">Preencha o Fomulario e nos conte sobre o seu projeto. </br>
                 Estamos prontos para ajudar!
             </p>
 
-            <ul>
-                <li>
-                    <img src="./assets/icon-location.png" alt="">
-                    <div>
-                        <h4>Endereço</h4>
-                        <p>Av. Paulista, 1000 - São Paulo/SP</p>
+            <ul class="contact__list">
+                <li class="contact-item">
+                    <img src="./assets/icon-location.png" alt="" class="contact-item__icon">
+                    <div class="contact-item__content">
+                        <h4 class="contact-item__title">Endereço</h4>
+                        <p class="contact-item__text">Av. Paulista, 1000 - São Paulo/SP</p>
                     </div>
                 </li>
-                <li>
-                    <img src="./assets/icon-phone.png" alt="">
-                    <div>
-                        <h4>Telefone</h4>
-                        <p>(11) 98888-8888</p>
+                <li class="contact-item">
+                    <img src="./assets/icon-phone.png" alt="" class="contact-item__icon">
+                    <div class="contact-item__content">
+                        <h4 class="contact-item__title">Telefone</h4>
+                        <p class="contact-item__text">(11) 98888-8888</p>
                     </div>
                 </li>
-                <li>
-                    <img src="./assets/icon-email.png" alt="">
-                    <div>
-                        <h4>E-mail</h4>
-                        <p>contato@nexora.com</p>
+                <li class="contact-item">
+                    <img src="./assets/icon-email.png" alt="" class="contact-item__icon">
+                    <div class="contact-item__content">
+                        <h4 class="contact-item__title">E-mail</h4>
+                        <p class="contact-item__text">contato@nexora.com</p>
                     </div>
                 </li>
             </ul>
         </div>
-        <form action="" id="contact-form">
-            <input type="text" placeholder="Nome" id="nome-informado" required>
-            <input type="email" placeholder="E-mail" id="email-informado" required>
-            <textarea name="mesage" id="mesage" placeholder="Mensagem" rows="5" cols="40"></textarea>
-            <button id="button-form">Enviar mensagem<span>→</span></button>
+        <form action="" class="form contact__form js-contact-form">
+            <input type="text" placeholder="Nome" class="form__input js-form-name" required>
+            <input type="email" placeholder="E-mail" class="form__input js-form-email" required>
+            <textarea name="mesage" placeholder="Mensagem" rows="5" cols="40" class="form__textarea js-form-message"></textarea>
+            <button class="button form__button">Enviar mensagem<span class="button__icon">→</span></button>
         </form>
     </section>
 
 
 
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-links">
-                <img src="./assets/footer-logo.png" alt="" class="footer-logo">
-                <ul>
-                    <li><a href=""><img src="./assets/instagram-icon.png" alt=""></a></li>
-                    <li><a href=""><img src="./assets/linkedin-icon.png" alt=""></a></li>
-                    <li><a href=""><img src="./assets/youtube-icon.png" alt=""></a></li>
+    <footer class="footer">
+        <div class="container footer__content">
+            <div class="footer__links">
+                <img src="./assets/footer-logo.png" alt="" class="footer__logo">
+                <ul class="footer__social-list">
+                    <li class="footer__social-item"><a href="" class="footer__social-link"><img src="./assets/instagram-icon.png" alt="" class="footer__social-icon"></a></li>
+                    <li class="footer__social-item"><a href="" class="footer__social-link"><img src="./assets/linkedin-icon.png" alt="" class="footer__social-icon"></a></li>
+                    <li class="footer__social-item"><a href="" class="footer__social-link"><img src="./assets/youtube-icon.png" alt="" class="footer__social-icon"></a></li>
                 </ul>
             </div>
-            <p>© 2026 Nexora, Todos os Direitos Reservados.</p>
+            <p class="footer__copyright">© 2026 Nexora, Todos os Direitos Reservados.</p>
         </div>
     </footer>
-
-
-
-
-
 
     <script src="./js/script.js"></script>
 </body>

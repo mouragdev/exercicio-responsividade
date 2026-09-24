@@ -8,43 +8,43 @@
     }
 
     /* Main Section / Hero */
-    main {
+    .hero {
         height: 55vh;
     }
 
-    main h1 {
+    .hero__title {
         font-size: 3.5rem;
         line-height: 4rem;
     }
 
-    main button {
+    .hero__button {
         width: auto;
         padding: 1.5rem 4rem;
     }
 
     /* Sobre - Ícones levemente maiores */
-    .topic-card img {
+    .topic-card__icon {
         width: 5rem;
     }
 
     /* Serviços - 2 colunas */
-    .services-grid {
+    .services__grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
     /* Depoimentos - 2 por linha */
-    .review-cards {
+    .reviews__grid {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    .review-cards article {
+    .review-card {
         width: calc(50% - 1rem);
     }
 
     /* Footer logo ajuste */
-    .footer-logo {
+    .footer__logo {
         width: 15rem;
     }
 }
@@ -60,7 +60,6 @@
 
     /* 
       1. CONTAINER LIMITADO E CENTRALIZADO 
-      Padrão de mercado para que o site não estique demais em monitores grandes.
     */
     .container {
         max-width: 1140px;
@@ -75,10 +74,10 @@
         padding-block: 8rem;
     }
 
-    .about-description h2, 
-    .services-header h2, 
-    .reviews h2, 
-    .contact-content h2 {
+    .about__title, 
+    .services__title, 
+    .reviews__title, 
+    .contact__title {
         font-size: 3.2rem;
         line-height: 3.8rem;
     }
@@ -86,18 +85,18 @@
     /* 
       3. HEADER E NAVEGAÇÃO 
     */
-    header {
+    .header {
         padding: 0 4rem;
         height: 10rem;
     }
 
-    header .home-logo {
+    .header__logo-link {
         max-width: none;
         width: 14rem;
     }
 
     /* Reset do menu mobile para virar linha */
-    header nav {
+    .header__nav {
         position: static;
         width: auto;
         height: auto;
@@ -108,7 +107,7 @@
         transition: none;
     }
 
-    header nav ul {
+    .header__menu {
         flex-direction: row;
         align-items: center;
         background-color: transparent;
@@ -118,44 +117,44 @@
         gap: 3rem;
     }
 
-    header nav ul li a {
+    .header__menu-link {
         font-size: 1.6rem;
     }
 
-    .contact-button {
+    .header__menu-link--button {
         margin-top: 0;
     }
 
     /* Esconder botões mobile */
-    #open-menu-button,
-    #close-menu-button {
+    .header__button--open,
+    .header__button--close {
         display: none !important;
     }
 
     /* 
       4. MAIN (HERO SECTION)
     */
-    main {
+    .hero {
         height: 85vh;
     }
 
-    .main-content {
+    .hero__content {
         height: 100%;
         justify-content: center;
     }
 
-    .main-content h1 {
+    .hero__title {
         font-size: 4.5rem;
         line-height: 5rem;
         max-width: 60%;
     }
 
-    .main-content p {
+    .hero__text {
         font-size: 1.6rem;
         max-width: 50%;
     }
 
-    .main-content button {
+    .hero__button {
         padding: 1.2rem 3.5rem;
         font-size: 1.6rem;
         width: max-content;
@@ -170,11 +169,11 @@
         gap: 5rem;
     }
 
-    .about-description {
+    .about__description {
         max-width: 80%;
     }
 
-    .about-topics {
+    .about__topics {
         margin-top: 0;
         flex-direction: row;
         justify-content: space-between;
@@ -185,7 +184,7 @@
     /* 
       6. SERVIÇOS
     */
-    .services-grid {
+    .services__grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 3rem;
     }
@@ -193,11 +192,11 @@
     /* 
       7. DEPOIMENTOS
     */
-    .review-cards {
+    .reviews__grid {
         flex-wrap: nowrap;
     }
 
-    .review-cards article {
+    .review-card {
         width: 33.33%;
     }
 
@@ -212,17 +211,17 @@
     }
 
     /* Exibe a lista de informações de contato no Desktop */
-    .contact-content ul {
+    .contact__list {
         display: flex;
         margin-top: 2rem;
     }
 
-    .contact-content ul li img {
+    .contact-item__icon {
         width: 4rem;
     }
 
     /* Adiciona um fundo e respiro ao formulário no Desktop */
-    .contact form {
+    .contact__form {
         margin-top: 0;
         padding: 4rem;
         background-color: var(--white);
@@ -231,8 +230,8 @@
         border: 1px solid rgba(0,0,0,0.03);
     }
 
-    .contact form input, 
-    .contact form textarea {
+    .form__input, 
+    .form__textarea {
         box-shadow: none;
         background-color: #f9f9f9;
         border: 1px solid #e0e0e0;
@@ -242,7 +241,7 @@
     /* 
       9. FOOTER
     */
-    .footer-content {
+    .footer__content {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
@@ -250,26 +249,26 @@
         padding-block: 3rem;
     }
 
-    .footer-links {
+    .footer__links {
         width: 60%;
         justify-content: space-between;
     }
 
-    .footer-links ul {
+    .footer__social-list {
         width: auto;
         gap: 2rem;
     }
 
-    .footer-links ul li a img {
+    .footer__social-icon {
         width: 2.5rem;
     }
 
-    .footer-logo {
+    .footer__logo {
         width: 14rem;
         margin: 0;
     }
 
-    .footer-content p {
+    .footer__copyright {
         width: auto;
         margin-top: 0;
     }
