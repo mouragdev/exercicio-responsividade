@@ -1,5 +1,6 @@
 const openMenuButton = document.querySelector(".js-open-menu");
 const closeMenuButton = document.querySelector(".js-close-menu");
+const headerNav = document.querySelector(".js-header-nav");
 
 // 1. Selecionamos todos os links de navegação usando sua classe funcional JS
 const navLinks = document.querySelectorAll(".js-nav-link");
@@ -7,10 +8,16 @@ const navLinks = document.querySelectorAll(".js-nav-link");
 function openMenu() {
     // Usamos o modificador de estado BEM --open na raiz ou onde for mais conveniente
     document.body.classList.add("page--menu-open");
+    headerNav.classList.add("header__nav--open");
+    openMenuButton.classList.add("is-hidden");
+    closeMenuButton.classList.add("is-visible");
 }
 
 function closeMenu() {
     document.body.classList.remove("page--menu-open");
+    headerNav.classList.remove("header__nav--open");
+    openMenuButton.classList.remove("is-hidden");
+    closeMenuButton.classList.remove("is-visible");
 }
 
 openMenuButton.addEventListener("click", openMenu);

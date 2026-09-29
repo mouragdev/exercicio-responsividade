@@ -29,16 +29,38 @@ body {
    ========================================= */
 
 /* Button */
+
 .button {
-    display: inline-block;
-    background-color: var(--light-blue);
-    color: white;
+    /* display: inline-block; */
     border: none;
     font-family: var(--manrope);
     font-weight: 700;
 }
+
 .button__icon {
     margin-left: 1rem;
+}
+
+
+/* Title and subtitles */
+
+.section-title {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.2rem;
+}
+
+.section-subtitle {
+    color: var(--light-blue);
+    font-weight: 700;
+}
+
+.section-text {
+    font-size: 1.4rem;
+}
+
+.section-text--white {
+    color: white;
 }
 
 /* Topic Card */
@@ -150,6 +172,8 @@ body {
 }
 .form__button {
     padding-block: 1rem;
+    background-color: var(--light-blue);
+    color: white;
 }
 
 /* =========================================
@@ -157,6 +181,7 @@ body {
    ========================================= */
 
 /* Header */
+
 .header {
     width: 100%;
     height: var(--header-height);
@@ -186,11 +211,14 @@ body {
     visibility: hidden;
     transition: transform 0.3s ease, visibility 0s 0.3s;
 }
-.page--menu-open .header__nav {
+
+/* Modificador do Nav (Ativado por JS) */
+.header__nav--open {
     transform: translateX(0);
     visibility: visible;
     transition: transform 0.3s ease, visibility 0s 0s;
 }
+
 .header__menu {
     background-color: var(--bg-header-mobile);
     list-style-type: none;
@@ -209,14 +237,14 @@ body {
 }
 .header__menu-link--button {
     display: inline-block;
-    border: 1px solid white;
     padding: 1rem 2rem;
     border-radius: 5rem;
     background-color: white;
     color: var(--bg-header-mobile);
-    font-weight: 700;
     margin-top: 4rem;
 }
+
+/* Header Buttons State */
 .header__button {
     background-color: transparent;
     border: none;
@@ -234,12 +262,10 @@ body {
 .header__button-icon--close {
     width: 45%;
 }
-.page--menu-open .header__button--open {
-    display: none;
-}
-.page--menu-open .header__button--close {
-    display: inline-block;
-}
+
+/* Utilities Modifiers controladas pelo JS (Sem seletores aninhados) */
+.is-hidden { display: none !important; }
+.is-visible { display: inline-block !important; }
 
 
 /* Hero Section */
@@ -258,47 +284,27 @@ body {
     height: 45vh;
     gap: 1.6rem;
 }
-.hero__subtitle {
-    color: var(--light-blue);
-    font-weight: 700;
-}
 .hero__title {
     color: white;
     font-size: 2.6rem;
     line-height: 3rem;
-}
-.hero__text {
-    color: white;
-    font-size: 1.4rem;
 }
 .hero__button {
     margin-top: 1.3rem;
     padding: 1rem 1rem;
     width: 52%;
     border-radius: 5rem;
+    background-color: var(--light-blue);
+    color: white;
 }
 
 
 /* About Section */
-.about {
-    padding-block: 4rem;
-}
+
 .about__description {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-}
-.about__subtitle {
-    color: var(--light-blue);
-    font-weight: 700;
-}
-.about__title {
-    font-weight: 700;
-    font-size: 2rem;
-    line-height: 2.2rem;
-}
-.about__text {
-    font-size: 1.4rem;
 }
 .about__topics {
     display: flex;
@@ -312,21 +318,11 @@ body {
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    padding-block: 4rem;
 }
 .services__header {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-}
-.services__subtitle {
-    color: var(--light-blue);
-    font-weight: 700;
-}
-.services__title {
-    font-weight: 700;
-    font-size: 2rem;
-    line-height: 2.2rem;
 }
 .services__grid {
     display: grid;
@@ -340,18 +336,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    padding-block: 4rem;
 }
-.reviews__subtitle {
-    color: var(--light-blue);
-    font-weight: 700;
-}
-.reviews__title {
-    font-weight: 700;
-    font-size: 2rem;
-    line-height: 2.2rem;
-}
-.reviews__grid {
+.reviews__box {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -365,24 +351,11 @@ body {
 .contact {
     display: flex;
     flex-direction: column;
-    padding-block: 4rem;
 }
 .contact__content {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-}
-.contact__subtitle {
-    color: var(--light-blue);
-    font-weight: 700;
-}
-.contact__title {
-    font-weight: 700;
-    font-size: 2rem;
-    line-height: 2.2rem;
-}
-.contact__text {
-    font-size: 1.4rem;
 }
 .contact__list {
     list-style-type: none;

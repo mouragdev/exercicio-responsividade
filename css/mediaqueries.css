@@ -33,7 +33,7 @@
     }
 
     /* Depoimentos - 2 por linha */
-    .reviews__grid {
+    .reviews__box {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
@@ -65,19 +65,14 @@
         max-width: 1140px;
         margin: 0 auto;
         padding-inline: 2rem;
+        padding-block: 8rem;
     }
 
     /* 
       2. PADRONIZAÇÃO DE ESPAÇAMENTOS (PADDING E TIPOGRAFIA)
     */
-    .about, .services, .reviews, .contact {
-        padding-block: 8rem;
-    }
 
-    .about__title, 
-    .services__title, 
-    .reviews__title, 
-    .contact__title {
+    .section-title {
         font-size: 3.2rem;
         line-height: 3.8rem;
     }
@@ -149,7 +144,7 @@
         max-width: 60%;
     }
 
-    .hero__text {
+    .section-text {
         font-size: 1.6rem;
         max-width: 50%;
     }
@@ -192,7 +187,7 @@
     /* 
       7. DEPOIMENTOS
     */
-    .reviews__grid {
+    .reviews__box {
         flex-wrap: nowrap;
     }
 
@@ -217,7 +212,7 @@
     }
 
     .contact-item__icon {
-        width: 4rem;
+        width: 3rem;
     }
 
     /* Adiciona um fundo e respiro ao formulário no Desktop */
