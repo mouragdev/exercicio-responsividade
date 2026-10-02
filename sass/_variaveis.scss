@@ -1,0 +1,21 @@
+@use 'sass:math';
+
+/* Primary Colors (Backgrounds) */
+
+    $bg-header-mobile: #0a0a0a;
+    $light-blue: #656dfc;
+    $white: #FFF;
+
+    /* Secondary Colors (Titles and Paragraphs) */
+
+    $gray-headline: #061800;
+    $gray-paragraph: #384633;
+    $box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    
+
+    /* Tipografias */
+
+    $manrope: "Manrope", sans-serif;
+
+    /* Calc Variables */
+    $header-height: 8rem;

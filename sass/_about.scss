@@ -1,0 +1,30 @@
+@use 'variaveis';
+@use 'sass:math';
+@use 'mixins';
+
+.about {
+    @media (min-width: 1024px) {
+        @include mixins.flex-column-gap(5rem);
+    }
+}
+
+.about__description {
+    @include mixins.flex-column-gap;
+
+    @media (min-width: 1024px) {
+        max-width: 80%;
+    }
+
+}
+
+.about__topics {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+
+    @media (min-width: 1024px) {
+        margin-top: 0;
+        width: 100%;
+        gap: 3rem;
+    }
+}

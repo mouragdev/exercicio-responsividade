@@ -1,0 +1,86 @@
+@use 'variaveis';
+@use 'sass:math';
+@use 'mixins';
+
+/* Footer Section */
+.footer {
+    background-color: variaveis.$bg-header-mobile;
+    width: 100%;
+
+    &__content {
+        @include mixins.flex-column-gap(2rem);
+        align-items: center;
+        justify-content: space-between;
+        color: variaveis.$white;
+        padding-block: 4rem;
+        
+
+        @media (min-width: 1024px) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding-inline: 0;
+            padding-block: 3rem;
+        }
+
+    }
+
+    &__logo {
+        width: 40%;
+
+        @media (min-width: 768px) {
+            width: 15rem;
+        }
+
+        @media (min-width: 1024px) {
+            width: 14rem;
+            margin: 0;
+        }
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        @media (min-width: 1024px) {
+            width: 60%;
+            justify-content: space-between;
+        }
+    }
+
+    &__social-list {
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 1rem;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        @media (min-width: 1024px) {
+            width: auto;
+            gap: 2rem;
+        }
+    }
+
+    &__social-icon {
+        width: 100%;
+
+        @media (min-width: 1024px) {
+            width: 2.5rem;
+        }
+    }
+
+    &__copyright {
+        @media (min-width: 1024px) {
+            width: auto;
+            margin-top: 0;
+        }
+    }
+
+}
+
+

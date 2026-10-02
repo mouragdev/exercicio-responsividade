@@ -1,0 +1,73 @@
+@use 'variaveis';
+@use 'sass:math';
+@use 'mixins';
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4)), url('../assets/hero-nexora.jpg');
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+
+    @media (min-width: 768px) {
+        height: 55vh;
+    }
+
+    @media (min-width: 1024px) {
+        height: 85vh;
+    }
+
+
+    &__content {
+        @include mixins.flex-column-gap;
+        align-items: start;
+        justify-content: center;
+        height: 45vh;
+        
+
+        @media (min-width: 1024px) {
+            height: 100%;
+            justify-content: center;
+        }
+    }
+
+    &__title {
+        color: variaveis.$white;
+        font-size: 2.6rem;
+        line-height: 3rem;
+
+        @media (min-width: 768px) {
+            font-size: 3.5rem;
+            line-height: 4rem;
+        }
+
+        @media (min-width: 1024px) {
+            font-size: 4.5rem;
+            line-height: 5rem;
+            max-width: 60%;
+        }
+
+    }
+
+    &__button {
+        margin-top: 1.3rem;
+        padding: 1rem 1rem;
+        width: 52%;
+        border-radius: 5rem;
+        background-color: variaveis.$light-blue;
+        color: variaveis.$white;
+
+        @media (min-width: 768px) {
+            width: auto;
+            padding: 1.5rem 4rem;
+        }
+
+        @media (min-width: 1024px) {
+            padding: 1.2rem 3.5rem;
+            font-size: 1.6rem;
+            width: max-content;
+        }
+    }
+}
+

@@ -1,0 +1,48 @@
+@use 'variaveis';
+
+:root {
+
+    /* 1rem = 10px */
+    font-size: 62.5%;
+
+}
+
+html {
+    width: 100%;
+    scroll-behavior: smooth;
+    /* Usa o tamanho do header para scrollar usando link, impedindo que o header tampe parte da section */
+    scroll-padding-top: variaveis.$header-height;
+
+    @media (min-width: 1024px) {
+        scroll-padding-top: 10rem;
+    }
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: variaveis.$manrope;
+
+    
+}
+
+.page--menu-open {
+    overflow: hidden;
+}
+
+.container {
+    padding-inline: 3rem;
+    padding-block: 4rem;
+
+    @media (min-width: 768px) {
+        padding-inline: 6rem;
+    }
+
+    @media (min-width: 1024px) {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding-inline: 2rem;
+        padding-block: 8rem;
+    }
+
+}

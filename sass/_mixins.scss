@@ -1,0 +1,15 @@
+@use 'variaveis';
+
+
+@mixin flex-column-gap ($gap: 1.5rem) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
+@mixin form-fild {
+    padding: .8rem;
+    box-shadow: variaveis.$box-shadow;
+    border: 1px solid rgb(150, 149, 149);
+    font-family: variaveis.$manrope;
+}
